@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3" *ngFor="let peli of datos">
+            <app-card [title]="peli.title" [img]="peli.img" [id]="peli.id"></app-card>
+        </div>
+    </div>
+</div>
+
+<app-loader *ngIf="loader"></app-loader>

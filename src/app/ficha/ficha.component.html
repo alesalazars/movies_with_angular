@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <img [src]="datos.img" />
+        </div>
+        <div class="col-8">
+            <h3>{{datos.title}}</h3>
+            <ul>
+                <li>
+                    <p><span>Description:</span> {{datos.description}}</p>
+                </li>
+                <li>
+                    <p><span>Year:</span> {{datos.year}}</p>
+                </li>
+                <li>
+                    <p><span>Country:</span> {{datos.pais}}</p>
+                </li>
+                <li>
+                    <p><span>Director:</span> {{datos.director}}</p>
+                </li>
+                <li>
+                    <p><span>Producer:</span> {{datos.productora}}</p>
+                </li>
+                <li>
+                    <ul>
+                        <p><span>Genders:</span></p>
+                        <li *ngFor="let gender of datos.genders"> {{gender}}</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{datos.trailer}}" target="blank" class="btn btn-primary">Ver trailer</a>
+                </li>
+            </ul>
+            <a [routerLink]="['/home']" class="btn btn-primary">Go back</a>
+        </div>
+    </div>
+</div>
